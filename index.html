@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html prefix="og: http://ogp.me/ns#" lang="pt">
+
+<head>
+    <!-- Metadados básicos -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Open Graph / Redes Sociais -->
+    <meta property="og:title" content="MUNDO DOS PAINÉIS- Painéis Premium é Aqui!" />
+    <meta property="og:description"
+        content="PAINEL CONFIÁVEL E DE QUALIDADE SOMENTE AQUI NO MUNDO DOS PAINÉIS" />
+    <meta property="og:image" content="https://evopro.sytes.net/images/min.png" />
+    <meta property="og:image:secure_url" content="https://evopro.sytes.net/images/min.png" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="MUNDO DOS PAINÉIS" />
+    <meta property="og:locale" content="pt_BR" />
+
+    <!-- Metadados para SEO -->
+    <meta name="description"
+        content="Streaming de filmes, séries e esportes ao vivo. Planos a partir de R$150. Teste grátis." />
+    <meta name="keywords" content="streaming, filmes, séries, TV online, esportes, entretenimento" />
+    <meta name="author" content="MUNDO DOS PAINÉIS" />
+    <meta name="theme-color" content="#006400" />
+
+    <!-- Links para recursos externos -->
+    <link rel="canonical" href="https://evopro.sytes.net" />
+    <link rel="icon" type="image/png" href="https://evopro.sytes.net/images/min.png" />
+    <link rel="apple-touch-icon" href="https://evopro.sytes.net/images/min.png" />
+
+    <!-- Título da página -->
+    <title>MUNDO DOS PAINÉIS- Painéis Premium é Aqui!</title>
+
+    <!-- Fuentes de Google -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome para ícones -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- AOS Animation Library para animações -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+
+    <!-- Tailwind CSS para estilização -->
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        /* Variáveis de cores - ajustadas conforme solicitado (verde escuro e verde neon) */
+        :root {
+            --primary: #006400;      /* Verde escuro principal */
+            --primary-dark: #004d00; /* Verde mais escuro */
+            --secondary: #39ff14;    /* Verde neon claro */
+            --accent: #00ff00;       /* Verde neon médio */
+            --dark: #006400;         /* Verde escuro para fundos */
+            --light: #ffffff;        /* Branco para textos */
+            --info-bg: #1a1a2e;      /* Fundo para áreas de informação (azul escuro) */
+            --info-border: #16213e;   /* Borda para áreas de informação */
+            --netflix-red: #e50914;  /* Mantido para referência */
+            --disney-blue: #0063e5;  /* Mantido para referência */
+            --hbo-purple: #5822b4;   /* Mantido para referência */
+        }
+
+        /* Estilos gerais */
+        body {
+            font-family: 'Poppins', sans-serif;
+            scroll-behavior: smooth;
+            overflow-x: hidden;
+            background-color: #006400; /* Fundo verde escuro */
+            color: white;
+        }
+
+        /* Gradiente para fundos de seções - tons de verde */
+        .streaming-gradient {
+            background: linear-gradient(135deg, #006400 0%, #008000 50%, #39ff14 100%);
+        }
+
+        /* Gradiente para seção hero */
+        .hero-gradient {
+            background: linear-gradient(to bottom, rgba(0, 100, 0, 0.9), rgba(0, 128, 0, 0.95));
+        }
+
+        /* Efeito de vidro escuro com verde */
+        .dark-glass {
+            background: rgba(0, 100, 0, 0.7);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+        }
+
+        /* Efeito de hover em cards */
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.3), 0 10px 10px -5px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Estilos para cards de planos */
+        .plan-card {
+            transition: all 0.4s ease;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .plan-card:hover {
+            transform: scale(1.03);
+            border-color: var(--primary);
+        }
+
+        .plan-popular {
+            transform: scale(1.05);
+            border: 2px solid var(--primary);
+        }
+
+        /* Ícones de recursos com gradiente verde */
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Efeito de brilho em botões com verde neon */
+        .btn-glow {
+            position: relative;
+            overflow: hidden;
+            z-index: 1;
+        }
+
+        .btn-glow:after {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, rgba(255, 255, 255, 0) 0%, rgba(57, 255, 20, 0.1) 50%, rgba(255, 255, 255, 0) 100%);
+            transform: rotate(30deg);
+            animation: glow 3s linear infinite;
+            z-index: -1;
+        }
+
+        @keyframes glow {
+            0% {
+                transform: translate(-50%, -50%) rotate(0deg);
+            }
+
+            100% {
+                transform: translate(-50%, -50%) rotate(360deg);
+            }
+        }
+
+        /* Animação de fade in */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.8s ease forwards;
+        }
+
+        /* Ícones de dispositivos com gradiente verde */
+        .device-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, var(--primary), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        /* Slider de conteúdo */
+        .content-slider {
+            scroll-snap-type: x mandatory;
+            scrollbar-width: none;
+        }
+
+        .content-slide {
+            scroll-snap-align: start;
+        }
+
+        .content-slider::-webkit-scrollbar {
+            display: none;
+        }
+
+        /* Efeito de brilho para bordas com verde neon */
+        .glow-border {
+            position: relative;
+        }
+
+        .glow-border::before {
+            content: '';
+            position: absolute;
+            top: -2px;
+            left: -2px;
+            right: -2px;
+            bottom: -2px;
+            border-radius: inherit;
+            background: linear-gradient(45deg, var(--primary), var(--accent), var(--primary-dark), var(--secondary));
+            z-index: -1;
+            animation: border-glow 3s linear infinite;
+        }
+
+        @keyframes border-glow {
+            0% {
+                opacity: 0.5;
+            }
+
+            50% {
+                opacity: 1;
+            }
+
+            100% {
+                opacity: 0.5;
+            }
+        }
+
+        /* Estilos para contagem regressiva com verde */
+        .countdown-container {
+            background: linear-gradient(90deg, var(--primary-dark), var(--primary));
+        }
+
+        .countdown-time {
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(5px);
+            border-radius: 6px;
+            padding: 0.5rem 0.8rem;
+            font-weight: 700;
+            min-width: 40px;
+            text-align: center;
+        }
+
+        /* Melhorias para dispositivos móveis */
+        @media (max-width: 768px) {
+            body {
+                padding-bottom: 60px;
+            }
+
+            .countdown-container {
+                position: fixed;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                z-index: 50;
+            }
+
+            .back-to-top {
+                bottom: 80px !important;
+            }
+        }
+
+        /* Botão voltar ao topo com verde */
+        .back-to-top {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 100;
+        }
+
+        .back-to-top.visible {
+            opacity: 1;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-5px);
+            background: var(--primary-dark);
+        }
+
+        /* Correções para navegadores móveis */
+        @media (max-width: 768px) {
+            /* Garante que o conteúdo se ajuste à largura do viewport sem rolagem horizontal */
+            .container {
+                width: 100% !important;
+                max-width: 100% !important;
+                padding-left: 15px !important;
+                padding-right: 15px !important;
+                overflow-x: hidden !important;
+            }
+
+            /* Correção para a seção hero */
+            #inicio .grid {
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+            }
+
+            /* Evita que qualquer elemento cause overflow horizontal */
+            body,
+            html {
+                overflow-x: hidden !important;
+                width: 100% !important;
+                position: relative !important;
+            }
+
+            /* Melhoria para imagens responsivas */
+            img {
+                max-width: 100% !important;
+                height: auto !important;
+            }
+        }
+        
+        /* Estilo para cards de informação com fundo contrastante */
+        .info-card {
+            background-color: var(--info-bg);
+            border: 1px solid var(--info-border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .info-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);
+            border-color: var(--secondary);
+        }
+        
+        /* Estilo para ícones de verificação com cor contrastante */
+        .check-icon {
+            color: var(--secondary);
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Barra de progresso de rolagem com verde -->
+    <div class="fixed top-0 left-0 h-1 bg-gradient-to-r from-green-500 via-green-400 to-green-500 z-50"
+        id="scrollProgress"></div>
+
+    <!-- Navegação principal -->
+    <nav class="dark-glass py-4 sticky top-0 z-40">
+        <div class="container mx-auto px-6">
+            <div class="flex items-center justify-between">
+                <!-- Logo -->
+                <a href="#"
+                    class="text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">
+                    MUNDO DOS PAINÉIS
+                </a>
+                
+                <!-- Menu de navegação para desktop -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#inicio" class="text-gray-300 hover:text-white transition-colors">Início</a>
+                    <a href="#conteudo" class="text-gray-300 hover:text-white transition-colors">Conteúdo</a>
+                    <a href="#planos" class="text-gray-300 hover:text-white transition-colors">Planos</a>
+                </div>
+                
+                <!-- Botão de ação principal -->
+                <button onclick="contactarWhatsApp()"
+                    class="bg-gradient-to-r from-green-500 to-green-700 text-white px-6 py-2 rounded-full hover:shadow-lg transform hover:scale-105 transition duration-300">
+                    SEJA UM REVENDEDOR
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contagem regressiva para oferta especial -->
+    <div class="countdown-container py-2 text-white hidden md:block">
+        <div class="container mx-auto px-4 flex justify-center items-center gap-3">
+            <div>
+                <i class="fas fa-bolt text-yellow-300 mr-2"></i>
+                <span class="font-bold">OFERTA EXCLUSIVA:</span>
+            </div>
+            <div class="flex items-center gap-1">
+                <span>Termina em</span>
+                <div class="flex gap-1">
+                    <span id="countHours" class="countdown-time">23</span>
+                    <span>:</span>
+                    <span id="countMinutes" class="countdown-time">59</span>
+                    <span>:</span>
+                    <span id="countSeconds" class="countdown-time">59</span>
+                </div>
+            </div>
+            <div>|</div>
+            <div>
+                <i class="fas fa-tag text-yellow-300 mr-2"></i>
+                <span>SEJA UM REVENDEDOR</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Seção Hero (principal) -->
+    <section id="inicio" class="relative overflow-hidden pt-16 pb-24 md:py-32">
+        <!-- Background com overlay -->
+        <div class="absolute inset-0 z-0">
+            <img src="https://evopro.sytes.net/images/magaplux2.jpeg" alt="Streaming Background"
+                class="w-full h-full object-cover">
+            <div class="absolute inset-0 hero-gradient"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
+                <!-- Conteúdo textual -->
+                <div class="space-y-8 animate-fade-in">
+                    <span class="inline-block bg-green-600 text-white text-sm px-4 py-1.5 rounded-full font-medium">
+                        AUMENTE SEUS LUCROS AGORA!
+                    </span>
+
+                    <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+                        SEJA NOSSO <span
+                            class="bg-clip-text text-transparent bg-gradient-to-r from-green-400 to-green-600">REVENDEDOR</span>
+                        Temos os Melhores Servidores do Mercado!
+                    </h1>
+
+                    <p class="text-xl text-gray-300">
+                        Seja um Revendedor e comece o seu Negócio com Qualidade e a Segurança que Você Merece!.
+                    </p>
+
+                    <!-- Botões de ação -->
+                    <div class="flex flex-wrap gap-4 pt-2">
+                        <button onclick="contactarWhatsApp()"
+                            class="btn-glow bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 px-8 py-4 rounded-xl text-white flex items-center gap-2 transform hover:scale-105 transition duration-300 shadow-lg">
+                            <i class="fas fa-play-circle text-xl"></i>
+                            <span class="font-semibold">TORNAR-SE UM REVENDEDOR</span>
+                        </button>
+
+                        <a href="#planos"
+                            class="px-8 py-4 rounded-xl border border-gray-200/30 text-white flex items-center gap-2 hover:bg-white/10 transition">
+                            <i class="fas fa-info-circle"></i>
+                            <span>Ver planos</span>
+                        </a>
+                    </div>
+
+                    <!-- Indicadores de confiança -->
+                    <div class="flex items-center gap-4">
+                        <div class="flex -space-x-2">
+                            <div
+                                class="w-10 h-10 rounded-full bg-green-500 flex items-center justify-center text-white border-2 border-gray-900">
+                                100</div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-green-400 flex items-center justify-center text-white border-2 border-gray-900">
+                                %</div>
+                            <div
+                                class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center text-white border-2 border-gray-900">
+                                confiável</div>
+                        </div>
+                        <span class="text-gray-300">Muitos usuários satisfeitos</span>
+                    </div>
+                </div>
+
+                <!-- Imagem de destaque -->
+                <div class="relative">
+                    <div class="glow-border rounded-2xl">
+                        <img src="https://iili.io/KkfHooF.jpg" alt="MUNDO DOS PAINÉIS"
+                            class="rounded-2xl shadow-2xl object-cover">
+                    </div>
+                    <div class="absolute top-4 right-4 bg-green-600 px-4 py-2 rounded-full font-semibold animate-pulse">
+                        MUNDO DOS PAINÉS
+                    </div>
+                </div>
+            </div>
+
+            <!-- Logos de compatibilidade -->
+            <div class="mt-24 pt-8 border-t border-gray-700/50">
+                <p class="text-center text-gray-400 mb-6 text-sm">CONFIAM EM NÓS</p>
+                <div class="flex flex-wrap justify-center items-center gap-8 md:gap-16 opacity-70">
+                    <i class="fab fa-apple text-3xl text-gray-400"></i>
+                    <i class="fab fa-android text-3xl text-gray-400"></i>
+                    <i class="fab fa-amazon text-3xl text-gray-400"></i>
+                    <i class="fab fa-chromecast text-3xl text-gray-400"></i>
+                    <i class="fab fa-xbox text-3xl text-gray-400"></i>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de características principais -->
+    <section class="py-24 streaming-gradient">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span
+                    class="inline-block bg-green-900/50 text-green-300 text-sm px-4 py-1.5 rounded-full font-medium">
+                    POR QUE ESCOLHER MUNDO DOS PAINÉIS
+                </span>
+                <h2 class="text-4xl font-bold mt-4">A melhor experiência em streaming</h2>
+                <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+                    NOSSOS PAINÉIS CONTAM COM UMA VASTO CATÁLAGO DE CONTEÚDOS E A QUALIDADE QUE SÓ MUNDO DOS PAINÉIS PODE OFERECER
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Característica 1: TV ao Vivo -->
+                <div class="info-card card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="text-5xl feature-icon">
+                        <i class="fas fa-tv"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">TV ao Vivo</h3>
+                    <p class="text-gray-300">
+                        Mais de 5.000 canais ao vivo de todo o mundo. Esportes, notícias, entretenimento e muito mais
+                        em tempo real.
+                    </p>
+                </div>
+
+                <!-- Característica 2: Filmes e Séries -->
+                <div class="info-card card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="text-5xl feature-icon">
+                        <i class="fas fa-film"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Filmes e Séries</h3>
+                    <p class="text-gray-300">
+                        Uma biblioteca com milhares de títulos atualizados constantemente. Desde os últimos lançamentos
+                        até os clássicos de sempre.
+                    </p>
+                </div>
+
+                <!-- Característica 3: Esportes -->
+                <div class="info-card card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="text-5xl feature-icon">
+                        <i class="fas fa-futbol"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Esportes</h3>
+                    <p class="text-gray-300">
+                        Todos os eventos esportivos importantes. Futebol, beisebol, basquete, NFL, UFC e mais com
+                        comentaristas especialistas.
+                    </p>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 mt-12">
+                <!-- Característica 4: Sem Contratos -->
+                <div class="info-card flex gap-6 items-start card-hover" data-aos="fade-right">
+                    <div class="text-3xl feature-icon flex-shrink-0">
+                        <i class="fas fa-ban"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Sem Contratos</h4>
+                        <p class="text-gray-300">
+                            Sem compromissos de longo prazo. Pague pelo tempo que quiser, de um mês a seis meses,
+                            e renove apenas se estiver satisfeito.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Característica 5: Múltiplos Dispositivos -->
+                <div class="info-card flex gap-6 items-start card-hover" data-aos="fade-left">
+                    <div class="text-3xl feature-icon flex-shrink-0">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-xl font-bold mb-2">Múltiplos Dispositivos</h4>
+                        <p class="text-gray-300">
+                            Compatível
+                            com smartphones, tablets, smart TVs e mais.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="flex justify-center mt-16">
+                <button onclick="contactarWhatsApp()"
+                    class="bg-gradient-to-r from-green-600 to-green-800 text-white px-8 py-4 rounded-xl hover:shadow-lg transform hover:scale-105 transition duration-300">
+                    ME TORNAR REVENDEDOR
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Slider de Conteúdo -->
+    <section id="conteudo" class="py-24 relative overflow-hidden">
+        <!-- Decoração de fundo -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black opacity-95"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-green-900/50 text-green-300 text-sm px-4 py-1.5 rounded-full font-medium">
+                    CATÁLOGO EXTENSO
+                </span>
+                <h2 class="text-4xl font-bold mt-4">SEJA UM REVENDEDOR OFICIAL</h2>
+                <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+                    Servidores com Qualidade e preço Justo Você só Encontra Aqui!
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center mt-12">
+                <!-- Conteúdo sobre Filmes e Séries -->
+                <div class="space-y-8" data-aos="fade-right">
+                    <h3 class="text-3xl font-bold">GARANTA JÁ O SEU PAINEL</h3>
+                    <p class="text-lg text-gray-300">
+                        Servidores com a Melhor Estabilidade do Mercado Máquinas de Alta Qualidade a Melhor do Mercado .
+                    </p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle check-icon mt-1"></i>
+                            <span>ESTÁVEL E RÁPIDO</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle check-icon mt-1"></i>
+                            <span>+DE 1K DE CANAIS AO VIO</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle check-icon mt-1"></i>
+                            <span>FILMES E SÉRIES SEMPRE ATUALIZADOS</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle check-icon mt-1"></i>
+                            <span>SUPORTE RÁPIDO E DEDICADO</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Imagem de destaque para Filmes e Séries -->
+                <div class="relative rounded-2xl overflow-hidden" data-aos="fade-left">
+                    <img src="https://iili.io/Kkfkq6G.md.jpg" alt="Conteúdo Premium"
+                        class="rounded-2xl shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                        <div>
+                            <span class="text-sm font-semibold bg-green-600 px-2 py-1 rounded">MUNDO DOS PAINÉIS</span>
+                            <h4 class="text-xl font-bold mt-1">SUA MELHOR ESCOLHA!</h4>
+                        </div>
+                        <button
+                            class="bg-white/20 hover:bg-white/30 rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm">
+                            <i class="fas fa-play text-white"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-16 items-center mt-24">
+                <!-- Imagem de destaque para Esportes -->
+                <div class="order-2 md:order-1 relative rounded-2xl overflow-hidden" data-aos="fade-right">
+                    <img src="https://iili.io/KkfHooF.jpg" alt="SEJA UM REVEDENDOR OFICIAL"
+                        class="rounded-2xl shadow-2xl">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black to-transparent"></div>
+                    <div class="absolute bottom-4 left-4 right-4 flex justify-between items-center">
+                        <div>
+                            <span class="text-sm font-semibold bg-green-600 px-2 py-1 rounded">MUNDO DOS PAINÉIS</span>
+                            <h4 class="text-xl font-bold mt-1">SUA MELHOR ESCOLHA</h4>
+                        </div>
+                        <button
+                            class="bg-white/20 hover:bg-white/30 rounded-full w-10 h-10 flex items-center justify-center backdrop-blur-sm">
+                            <i class="fas fa-play text-white"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Conteúdo sobre Esportes -->
+                <div class="order-1 md:order-2 space-y-8" data-aos="fade-left">
+                    <h3 class="text-3xl font-bold">SEJA UM REVENDEDOR OFICIAL!</h3>
+                    <p class="text-lg text-gray-300">
+                        TEMOS OS MELHORES SERVIDORES DO MERCADO, E AS MELHORES PARCERIAS.
+                    </p>
+
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle check-icon mt-1"></i>
+                            <span>XCLOUD E LAZER PLAYER</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle check-icon mt-1"></i>
+                            <span>SUPORTE RÁPIDO E DEDICADO</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle check-icon mt-1"></i>
+                            <span>OS MELHORES PREÇOS</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check-circle check-icon mt-1"></i>
+                            <span>PAINÉIS DE ADM ILIMITADO</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Planos e Preços -->
+    <section id="planos" class="py-24 streaming-gradient">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-green-900/50 text-green-300 text-sm px-4 py-1.5 rounded-full font-medium">
+                    PREÇOS ACESSÍVEIS
+                </span>
+                <h2 class="text-4xl font-bold mt-4">Planos para todos</h2>
+                <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+                    Escolha o plano que melhor se adapte às suas necessidades
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Plano Básico -->
+                <div class="plan-card info-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold">PLANO SÓCIO MENSALISTA</h3>
+                        <div class="text-4xl font-bold">30 CRÉDITOS APARTIR DE <span class="text-lg text-gray-400">R$50 REAIS</span></div>
+                        <p class="text-gray-400 pb-4">CHAME AGORA E CONFIRA A TABELA COMPLETA</p>
+                    </div>
+
+                    <div class="border-t border-gray-700 my-6"></div>
+                    <ul class="space-y-4 mb-12">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>R$70 - 50 Créditos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>R$100 - 100 Créditos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>R$150 - 150 Créditos</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>R$200 - 500 Créditos</span>
+                        </li>
+                    </ul>
+
+                    <button onclick="contactarWhatsApp()"
+                        class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl transition duration-300">
+                        Escolher Plano
+                    </button>
+                </div>
+
+                <!-- Plano Premium -->
+                <div class="plan-card plan-popular info-card" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <div class="absolute -top-4 left-0 right-0 flex justify-center">
+                        <span
+                            class="bg-gradient-to-r from-green-500 to-green-600 text-black px-4 py-1 rounded-full text-sm font-bold">
+                            MAIS POPULAR
+                        </span>
+                    </div>
+
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold">PAINEL ADM ILIMITADO</h3>
+                        <div class="text-4xl font-bold">R$300<span class="text-lg text-gray-400">/IMPERDÍVEL!</span></div>
+                        <p class="text-gray-400 pb-4">GARANTA JÁ SEU!</p>
+                    </div>
+
+                    <div class="border-t border-gray-700 my-6"></div>
+
+                    <ul class="space-y-4 mb-12">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>PARCERIA LAZER PLAYER</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>ESTABILIDADE GARANTIDA</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>CONTEÚDOS EXCLUSIVOS</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>SATISFAÇÃO GARANTIDA</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>SUPORTE RÁPIDO</span>
+                        </li>
+                    </ul>
+
+                    <button onclick="contactarWhatsApp()"
+                        class="w-full bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white py-3 rounded-xl transition duration-300 transform hover:scale-105">
+                        Escolher Plano
+                    </button>
+                </div>
+
+                <!-- Plano Familiar -->
+                <div class="plan-card info-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="space-y-4">
+                        <h3 class="text-2xl font-bold">CRÉDITOS PRÉ-PAGO</h3>
+                        <div class="text-4xl font-bold">A MELHOR ESCOLHA<span class="text-lg text-gray-400"></span></div>
+                        <p class="text-gray-400 pb-4">A melhor opção a longo prazo</p>
+                    </div>
+
+                    <div class="border-t border-gray-700 my-6"></div>
+
+                    <ul class="space-y-4 mb-12">
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>10 CRÉDITOS - R$40</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>50 CRÉDITOS - R$190</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>80 CRÉDITOS - R$280</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>100 CRÉDITOS - R$300</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>200 CRÉDITOS - R$500</span>
+                        </li>
+                        <li class="flex items-start gap-3">
+                            <i class="fas fa-check check-icon"></i>
+                            <span>500 CRÉDITOS - R$900</span>
+                        </li>
+                    </ul>
+
+                    <button onclick="contactarWhatsApp()"
+                        class="w-full bg-green-600 hover:bg-green-700 text-white py-3 rounded-xl transition duration-300">
+                        Escolher Plano
+                    </button>
+                </div>
+            </div>
+
+            <div class="mt-16 text-center" data-aos="fade-up">
+                <p class="text-lg text-gray-300 mb-6">
+                    Não tem certeza de qual plano escolher?
+                </p>
+                <button onclick="contactarWhatsApp()"
+                    class="bg-gradient-to-r from-green-500 to-green-700 text-white px-8 py-4 rounded-xl hover:shadow-lg transform hover:scale-105 transition duration-300">
+                    <i class="fas fa-ticket-alt mr-2"></i> ENTRAR EN CONTATO
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seção de Depoimentos -->
+    <section class="py-24 relative overflow-hidden">
+        <!-- Decoração de fundo -->
+        <div class="absolute inset-0 z-0">
+            <div class="absolute inset-0 bg-gradient-to-b from-gray-900 to-black opacity-95"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16" data-aos="fade-up">
+                <span class="inline-block bg-green-900/50 text-green-300 text-sm px-4 py-1.5 rounded-full font-medium">
+                    CLIENTES SATISFEITOS
+                </span>
+                <h2 class="text-4xl font-bold mt-4">O que nossos usuários dizem</h2>
+                <p class="text-xl text-gray-300 mt-4 max-w-3xl mx-auto">
+                    MUITAS PESSOAS JÁ SE TORNARAM REVENDEDORES DO MUNDO DOS PAINÉIS E SEUS CLIENTES ESTÃO TODOS SATISFEITOS
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Depoimento 1 -->
+                <div class="info-card card-hover" data-aos="fade-up" data-aos-delay="100">
+                    <div class="flex text-yellow-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-8">
+                        "Incrível serviço. A qualidade de imagem é excelente e têm todos os canais esportivos que
+                        eu queria. O aplicativo funciona perfeitamente na minha Smart TV."
+                    </p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-xl font-bold">
+                            JL
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">João Lima</h4>
+                            <p class="text-sm text-gray-400">Usuário desde 2022</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2 -->
+                <div class="info-card card-hover" data-aos="fade-up" data-aos-delay="200">
+                    <div class="flex text-yellow-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-8">
+                        "Comecei como usuário e agora sou revendedora. O suporte técnico é excelente e meus clientes
+                        estão encantados com o serviço. Negócio rentável e fácil de gerenciar."
+                    </p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-xl font-bold">
+                            MR
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Maria Rodrigues</h4>
+                            <p class="text-sm text-gray-400">Revendedora</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3 -->
+                <div class="info-card card-hover" data-aos="fade-up" data-aos-delay="300">
+                    <div class="flex text-yellow-500 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <p class="text-gray-300 italic mb-8">
+                        "Fantástico catálogo de filmes e séries. A possibilidade de assistir em vários dispositivos ao
+                        mesmo tempo é ótima para toda a família. Relação custo-benefício imbatível."
+                    </p>
+                    <div class="flex items-center">
+                        <div
+                            class="w-12 h-12 rounded-full bg-green-600 flex items-center justify-center text-xl font-bold">
+                            PG
+                        </div>
+                        <div class="ml-4">
+                            <h4 class="font-semibold">Pedro Garcia</h4>
+                            <p class="text-sm text-gray-400">Plano Familiar</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final (Chamada para Ação) -->
+    <section class="py-20 streaming-gradient">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center" data-aos="fade-up">
+                <span class="inline-block bg-white/10 text-white text-sm px-4 py-1.5 rounded-full font-medium mb-6">
+                    COMECE HOJE MESMO
+                </span>
+
+                <h2 class="text-4xl md:text-5xl font-bold mb-8">
+                    SEJA UM REVENDEDOR OFICIAL
+                </h2>
+
+                <p class="text-xl text-gray-300 mb-12 max-w-3xl mx-auto">
+                    AUMENTE SEUS LUCROS E TENHA A QUALIDADE QUE VOCÊ E SEUS CLIENTES MERECE.
+                </p>
+
+                <div class="flex flex-col md:flex-row items-center justify-center gap-6">
+                    <button onclick="contactarWhatsApp()"
+                        class="btn-glow bg-gradient-to-r from-green-600 to-green-800 hover:from-green-700 hover:to-green-900 text-white px-8 py-4 rounded-xl flex items-center gap-2 transform hover:scale-105 transition duration-300 w-full md:w-auto">
+                        <i class="fas fa-play-circle text-xl"></i>
+                        <span class="font-semibold">ME TORNAR UM REVENDEDOR</span>
+                    </button>
+
+                    <button onclick="contactarWhatsApp()"
+                        class="bg-white/10 hover:bg-white/20 border border-white/30 text-white px-8 py-4 rounded-xl flex items-center gap-2 transition w-full md:w-auto">
+                        <i class="fas fa-info-circle"></i>
+                        <span>Mais informações</span>
+                    </button>
+                </div>
+
+                <div class="mt-8 p-4 bg-gray-900/30 rounded-lg inline-block">
+                    <p class="text-gray-400 text-sm">
+                        <i class="fas fa-shield-alt text-green-500 mr-2"></i> Pagamento seguro garantido | Suporte 24/H |
+                        Cancelamento a qualquer momento
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contagem regressiva para dispositivos móveis -->
+    <div class="fixed bottom-0 left-0 right-0 md:hidden countdown-container py-3 z-50">
+        <div class="container mx-auto px-4 flex flex-col items-center">
+            <p class="text-sm mb-1">Oferta especial termina em:</p>
+            <div class="flex gap-1">
+                <span id="mobileCountHours" class="countdown-time text-sm">23</span>
+                <span>:</span>
+                <span id="mobileCountMinutes" class="countdown-time text-sm">59</span>
+                <span>:</span>
+                <span id="mobileCountSeconds" class="countdown-time text-sm">59</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Botão de contato flutuante para dispositivos móveis -->
+    <div class="fixed bottom-16 right-4 md:hidden z-50">
+        <button onclick="contactarWhatsApp()"
+            class="bg-gradient-to-r from-green-500 to-green-700 text-white w-14 h-14 rounded-full shadow-lg flex items-center justify-center">
+            <i class="fab fa-whatsapp text-2xl"></i>
+        </button>
+    </div>
+
+    <!-- Rodapé -->
+    <footer class="bg-gray-900 text-white py-16">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-2 md:grid-cols-2 gap-8 mb-12">
+                <!-- Links de navegação -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">MUNDO DOS PAINÉIS</h3>
+                    <ul class="space-y-2">
+                        <li><a href="#inicio" class="text-gray-400 hover:text-white transition-colors">Início</a></li>
+                        <li><a href="#conteudo" class="text-gray-400 hover:text-white transition-colors">Conteúdo</a>
+                        </li>
+                        <li><a href="#planos" class="text-gray-400 hover:text-white transition-colors">Planos</a></li>
+                    </ul>
+                </div>
+
+                <!-- Informações de contato -->
+                <div>
+                    <h3 class="text-xl font-bold mb-4">Contato</h3>
+                    <a href="javascript:contactarWhatsApp()"
+                        class="bg-gradient-to-r from-green-500 to-green-700 text-white px-6 py-2 rounded-lg flex items-center justify-center gap-2 mb-4 hover:shadow-lg transition">
+                        <i class="fab fa-whatsapp"></i>
+                        <span>WhatsApp</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 pt-8 text-center">
+                <p class="text-gray-500 text-sm">
+                    &copy; 2025 MUNDO DOS PAINÉIS. Todos os direitos reservados.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botão voltar ao topo -->
+    <div class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </div>
+
+    <!-- Biblioteca AOS para animações -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+
+    <script>
+        // Inicializar AOS (Animate On Scroll)
+        document.addEventListener('DOMContentLoaded', function () {
+            AOS.init({
+                duration: 800,
+                once: true,
+                offset: 100
+            });
+        });
+
+        // Contador regressivo
+        function updateCountdown() {
+            let hours = 23;
+            let minutes = 59;
+            let seconds = 59;
+
+            function updateTime() {
+                if (seconds > 0) {
+                    seconds--;
+                } else {
+                    seconds = 59;
+                    if (minutes > 0) {
+                        minutes--;
+                    } else {
+                        minutes = 59;
+                        if (hours > 0) hours--;
+                    }
+                }
+
+                // Atualizar contadores desktop e móvel
+                document.getElementById('countHours').textContent = String(hours).padStart(2, '0');
+                document.getElementById('countMinutes').textContent = String(minutes).padStart(2, '0');
+                document.getElementById('countSeconds').textContent = String(seconds).padStart(2, '0');
+
+                // Também atualizar contadores móveis
+                if (document.getElementById('mobileCountHours')) {
+                    document.getElementById('mobileCountHours').textContent = String(hours).padStart(2, '0');
+                    document.getElementById('mobileCountMinutes').textContent = String(minutes).padStart(2, '0');
+                    document.getElementById('mobileCountSeconds').textContent = String(seconds).padStart(2, '0');
+                }
+            }
+
+            // Atualizar a cada segundo
+            setInterval(updateTime, 1000);
+        }
+
+        // Função para contato via WhatsApp
+        function contactarWhatsApp() {
+            window.open('https://whatsapp.com/channel/0029VbBXVpZ2UPBG3xCg231C', '_blank');
+        }
+
+        // Barra de progresso de rolagem
+        window.addEventListener('scroll', () => {
+            const scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+            const scrollHeight = document.documentElement.scrollHeight || document.body.scrollHeight;
+            const clientHeight = document.documentElement.clientHeight || document.body.clientHeight;
+
+            const scrollPercentage = (scrollTop / (scrollHeight - clientHeight)) * 100;
+            document.getElementById('scrollProgress').style.width = scrollPercentage + '%';
+
+            // Mostrar/ocultar botão "voltar ao topo"
+            if (scrollTop > 300) {
+                document.getElementById('backToTop').classList.add('visible');
+            } else {
+                document.getElementById('backToTop').classList.remove('visible');
+            }
+        });
+
+        // Voltar ao topo
+        document.getElementById('backToTop').addEventListener('click', () => {
+            window.scrollTo({
+                top: 0,
+                behavior: 'smooth'
+            });
+        });
+
+        // Rolagem suave para links internos
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                const targetId = this.getAttribute('href');
+                if (targetId === '#') return;
+
+                const targetElement = document.querySelector(targetId);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Iniciar funções ao carregar a página
+        updateCountdown();
+    </script>
+</body>
+
+</html>
